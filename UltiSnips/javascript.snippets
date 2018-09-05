@@ -1,204 +1,204 @@
-snippet imp "import"
+snippet imp "import" w
 import ${2:moduleName} from '${1:module}'$0
 endsnippet
 
-snippet imn "importNoModuleName"
+snippet imn "importNoModuleName" w
 import '${1:module}'$0
 endsnippet
 
-snippet imd "importDestructing"
+snippet imd "importDestructing" w
 import { $2 } from '${1:module}'$0
 endsnippet
 
-snippet ime "importEverything"
+snippet ime "importEverything" w
 import * as ${2:alias} from '${1:module}'$0
 endsnippet
 
-snippet ima "importAs"
+snippet ima "importAs" w
 import { ${2:originalName} as ${3:alias} } from '${1:module}'$0
 endsnippet
 
-snippet exp "exportDefault"
+snippet exp "exportDefault" w
 export default $1$0
 endsnippet
 
-snippet exd "exportDestructing"
+snippet exd "exportDestructing" w
 export { $2 } from '${1:module}'$0
 endsnippet
 
-snippet exa "exportAs"
+snippet exa "exportAs" w
 export { ${2:originalName} as ${3:alias} } from '${1:module}'$0
 endsnippet
 
-snippet enf "Export named function in ES7 syntax"
+snippet enf "Export named function in ES7 syntax" w
 export const ${1:functionName} = (${2:params}) => {
   $0
 }
 endsnippet
 
-snippet edf "Export default function in ES7 syntax"
+snippet edf "Export default function in ES7 syntax" w
 export default (${1:params}) => {
   $0
 }
 endsnippet
 
-snippet met "Creates a method inside a class in ES7 syntax"
+snippet met "Creates a method inside a class in ES7 syntax" w
 ${1:methodName} = (${2:params}) => {
   ${0}
 }
 endsnippet
 
-snippet pge "Creates a getter property inside a class in ES7 syntax"
+snippet pge "Creates a getter property inside a class in ES7 syntax" w
 get ${1:propertyName} = () => {
   return this.${0}
 }
 endsnippet
 
-snippet pse "Creates a setter property inside a class in ES7 syntax"
+snippet pse "Creates a setter property inside a class in ES7 syntax" w
 set ${1:propertyName} = (${2:value}) => {
   ${0}
 }
 endsnippet
 
-snippet fre "Creates a forEach statement in ES7 syntax"
+snippet fre "Creates a forEach statement in ES7 syntax" w
 ${1:array}.forEach(${2:currentItem} => {
   ${0}
 })
 endsnippet
 
-snippet fof "Iterating over property names of iterable objects"
+snippet fof "Iterating over property names of iterable objects" w
 for(let ${1:item} of ${2:object}) {
   ${0}
 }
 endsnippet
 
-snippet fin "Iterating over property values of iterable objects"
+snippet fin "Iterating over property values of iterable objects" w
 for(let ${1:item} in ${2:object}) {
   ${0}
 }
 endsnippet
 
-snippet anfn "Creates an anonymous function in ES7 syntax"
+snippet anfn "Creates an anonymous function in ES7 syntax" w
 (${1:params}) => {
   ${2}
 }
 endsnippet
 
-snippet nfn "Creates a named function in ES7 syntax"
+snippet nfn "Creates a named function in ES7 syntax" w
 const ${1:name} = (${2:params}) => {
   ${3}
 }
 endsnippet
 
-snippet dob "Creates and assigns a local variable using object destructing"
+snippet dob "Creates and assigns a local variable using object destructing" w
 const {${1:propertyName}} = ${2:objectToDestruct}
 endsnippet
 
-snippet dar "Creates and assigns a local variable using array destructing"
+snippet dar "Creates and assigns a local variable using array destructing" w
 const [${1:propertyName}] = ${2:arrayToDestruct}
 endsnippet
 
-snippet sti "Executes the given function at specified intervals in ES7 syntax"
+snippet sti "Executes the given function at specified intervals in ES7 syntax" w
 setInterval(() => {
   ${2}
 }, ${0:intervalInms})
 endsnippet
 
-snippet sto "Executes the given function after the specified delay in ES7 syntax"
+snippet sto "Executes the given function after the specified delay in ES7 syntax" w
 setTimeout(() => {
   ${2}
 }, ${1:delayInms})
 endsnippet
 
-snippet prom "Creates and returns a new Promise in the standard ES7 syntax"
+snippet prom "Creates and returns a new Promise in the standard ES7 syntax" w
 return new Promise((resolve, reject) => {
   ${1}
 })
 endsnippet
 
-snippet cas "If the specified expression is false, the message is written to the console along with a stack trace"
+snippet cas "If the specified expression is false, the message is written to the console along with a stack trace" w
 console.assert(${1:expression}, ${2:object})
 endsnippet
 
-snippet ccl "Clears the console"
+snippet ccl "Clears the console" w
 console.clear()
 endsnippet
 
-snippet cco "Writes the the number of times that count() has been invoked at the same line and with the same label"
+snippet cco "Writes the the number of times that count() has been invoked at the same line and with the same label" w
 console.count(${1:label})
 endsnippet
 
-snippet cdi "Prints a JavaScript representation of the specified object"
+snippet cdi "Prints a JavaScript representation of the specified object" w
 console.dir(${1:object})
 endsnippet
 
-snippet cer "Displays a message in the console and also includes a stack trace from where the method was called"
+snippet cer "Displays a message in the console and also includes a stack trace from where the method was called" w
 console.error(${1:object})
 endsnippet
 
-snippet cge "Closes out the corresponding console.group()."
+snippet cge "Closes out the corresponding console.group()." w
 console.groupEnd()
 endsnippet
 
-snippet clg "Displays a message in the console"
+snippet clg "Displays a message in the console" w
 console.log(${1:object})
 endsnippet
 
-snippet ctr "Prints a stack trace from the point where the method was called"
+snippet ctr "Prints a stack trace from the point where the method was called" w
 console.trace(${1:object})
 endsnippet
 
-snippet cwa "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+snippet cwa "Displays a message in the console but also displays a yellow warning icon along with the logged message" w
 console.warn(${1:object})
 endsnippet
 
-snippet cin "Displays a message in the console but also displays a blue information icon along with the logged message"
+snippet cin "Displays a message in the console but also displays a blue information icon along with the logged message" w
 console.info(${1:object})
 endsnippet
 
-snippet cp "Creates and assigns a local variable using props destructing"
+snippet cp "Creates and assigns a local variable using props destructing" w
 const { $1 } = this.props
 endsnippet
 
-snippet cs "Creates and assigns a local variable using state destructing"
+snippet cs "Creates and assigns a local variable using state destructing" w
 const { $1 } = this.state
 endsnippet
 
-snippet imr "import React"
+snippet imr "import React" w
 import React from 'react'
 endsnippet
 
-snippet imrd "import ReactDOM"
+snippet imrd "import ReactDOM" w
 import ReactDOM from 'react-dom'
 endsnippet
 
-snippet imrc "import React, { Component }"
+snippet imrc "import React, { Component }" w
 import React, { Component } from 'react'
 endsnippet
 
-snippet imrcp "import React, { Component } & PropTypes"
+snippet imrcp "import React, { Component } & PropTypes" w
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 endsnippet
 
-snippet imrpc "import React, { PureComponent }"
+snippet imrpc "import React, { PureComponent }" w
 import React, { PureComponent } from 'react'
 endsnippet
 
-snippet imrpcp "import React, { PureComponent } & PropTypes"
+snippet imrpcp "import React, { PureComponent } & PropTypes" w
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 endsnippet
 
-snippet impt "import PropTypes"
+snippet impt "import PropTypes" w
 import PropTypes from 'prop-types'
 endsnippet
 
-snippet redux "import redux statement"
+snippet redux "import redux statement" w
 import { connect } from 'react-redux'
 endsnippet
 
-snippet rcc "Creates a React component class with ES7 module system"
+snippet rcc "Creates a React component class with ES7 module system" w
 import React, { Component } from 'react'
 
 export default class ${1:${TM_FILENAME_BASE}} extends Component {
@@ -212,7 +212,7 @@ export default class ${1:${TM_FILENAME_BASE}} extends Component {
 }
 endsnippet
 
-snippet rce "Creates a React component class with ES7 module system"
+snippet rce "Creates a React component class with ES7 module system" w
 import React, { Component } from 'react'
 
 export class ${1:${TM_FILENAME_BASE}} extends Component {
@@ -228,7 +228,7 @@ export class ${1:${TM_FILENAME_BASE}} extends Component {
 export default ${1:${TM_FILENAME_BASE}}
 endsnippet
 
-snippet rfe "Creates a React Functional Component with ES7 module system"
+snippet rfe "Creates a React Functional Component with ES7 module system" w
 import React from 'react'
 
 const ${1:${TM_FILENAME_BASE}} = () => {
@@ -242,7 +242,7 @@ const ${1:${TM_FILENAME_BASE}} = () => {
 export default ${1:${TM_FILENAME_BASE}}
 endsnippet
 
-snippet rfep "Creates a React Functional Component with ES7 module system with PropTypes"
+snippet rfep "Creates a React Functional Component with ES7 module system with PropTypes" w
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -261,7 +261,7 @@ ${1:${TM_FILENAME_BASE}}.propTypes = {
 export default ${1:${TM_FILENAME_BASE}}
 endsnippet
 
-snippet rfc "Creates a React Functional Component with ES7 module system"
+snippet rfc "Creates a React Functional Component with ES7 module system" w
 import React from 'react'
 
 export default () => {
@@ -273,7 +273,7 @@ export default () => {
 }
 endsnippet
 
-snippet rfcp "Creates a React Functional Component with ES7 module system with PropTypes"
+snippet rfcp "Creates a React Functional Component with ES7 module system with PropTypes" w
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -290,7 +290,7 @@ ${1:${TM_FILENAME_BASE}}.propTypes = {
 }
 endsnippet
 
-snippet rcep "Creates a React component class with ES7 module system"
+snippet rcep "Creates a React component class with ES7 module system" w
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
@@ -311,7 +311,7 @@ export class ${1:${TM_FILENAME_BASE}} extends Component {
 export default ${1:${TM_FILENAME_BASE}}
 endsnippet
 
-snippet rpc "Creates a React component class with ES7 module system"
+snippet rpc "Creates a React component class with ES7 module system" w
 import React, { PureComponent } from 'react'
 
 export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {
@@ -325,7 +325,7 @@ export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {
 }
 endsnippet
 
-snippet rpcp "Creates a React component class with ES7 module system"
+snippet rpcp "Creates a React component class with ES7 module system" w
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
@@ -344,7 +344,7 @@ export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {
 }
 endsnippet
 
-snippet rccp "Creates a React component class with PropTypes and ES7 module system"
+snippet rccp "Creates a React component class with PropTypes and ES7 module system" w
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
@@ -363,7 +363,7 @@ export default class ${1:${TM_FILENAME_BASE}} extends Component {
 }
 endsnippet
 
-snippet rcredux "Creates a React component class with PropTypes with connected redux and ES7 module system"
+snippet rcredux "Creates a React component class with PropTypes with connected redux and ES7 module system" w
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -393,7 +393,7 @@ const mapDispatchToProps = {
 export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})
 endsnippet
 
-snippet reduxmap "mappingToProps"
+snippet reduxmap "mappingToProps" w
 const mapStateToProps = (state) => ({
   ${1}
 })
@@ -403,7 +403,7 @@ const mapDispatchToProps = {
 }
 endsnippet
 
-snippet rconst "Adds a default constructor for it('', () => {})the class that contains props as arguments"
+snippet rconst "Adds a default constructor for it('', () => {})the class that contains props as arguments" w
 constructor(props) {
   super(props)
 
@@ -413,66 +413,66 @@ constructor(props) {
 }
 endsnippet
 
-snippet est "Creates empty state object. To be used in a constructor."
+snippet est "Creates empty state object. To be used in a constructor." w
 state = {
   $1
 }
 endsnippet
 
-snippet cwm "DEPRECATED!!!. Invoked once, both on the client and server, immediately before the initial rendering occurs"
+snippet cwm "DEPRECATED!!!. Invoked once, both on the client and server, immediately before the initial rendering occurs" w
 componentWillMount = () => {
   $0
 }
 endsnippet
 
-snippet cdm "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs."
+snippet cdm "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs." w
 componentDidMount = () => {
   $0
 }
 endsnippet
 
-snippet cwr "DEPRECATED!!!. Invoked when a component is receiving new props. This method is not called for the initial render."
+snippet cwr "DEPRECATED!!!. Invoked when a component is receiving new props. This method is not called for the initial render." w
 componentWillReceiveProps = (nextProps) => {
   $0
 }
 endsnippet
 
-snippet scu "Invoked before rendering when new props or state are being received. "
+snippet scu "Invoked before rendering when new props or state are being received. " w
 shouldComponentUpdate = (nextProps, nextState) => {
   $0
 }
 endsnippet
 
-snippet cwup "DEPRECATED!!!. Invoked immediately before rendering when new props or state are being received."
+snippet cwup "DEPRECATED!!!. Invoked immediately before rendering when new props or state are being received." w
 componentWillUpdate = (nextProps, nextState) => {
   $0
 }
 endsnippet
 
-snippet cdup "Invoked immediately after the component's updates are flushed to the DOM."
+snippet cdup "Invoked immediately after the component's updates are flushed to the DOM." w
 componentDidUpdate = (prevProps, prevState) => {
   $0
 }
 endsnippet
 
-snippet cwun "Invoked immediately before a component is unmounted from the DOM."
+snippet cwun "Invoked immediately before a component is unmounted from the DOM." w
 componentWillUnmount = () => {
   $0
 }
 endsnippet
 
-snippet gdsfp "Invoked after a component is instantiated as well as when it receives new props."
+snippet gdsfp "Invoked after a component is instantiated as well as when it receives new props." w
 static getDerivedStateFromProps(nextProps, prevState) {
   ${1}
 endsnippet
 
-snippet gsbu "Called right before mutations are made (e.g. before the DOM is updated)"
+snippet gsbu "Called right before mutations are made (e.g. before the DOM is updated)" w
 getSnapshotBeforeUpdate = (prevProps, prevState) => {
   $0
 }
 endsnippet
 
-snippet ren "Basic render."
+snippet ren "Basic render." w
 render() {
   return (
     <div>
@@ -482,50 +482,50 @@ render() {
 }
 endsnippet
 
-snippet rcontext "Create React context"
+snippet rcontext "Create React context" w
 const ${1:contextName} = React.createContext()
 endsnippet
 
-snippet cref "Create ref statement used inside constructor"
+snippet cref "Create ref statement used inside constructor" w
 this.${1:refName}Ref = React.createRef()
 endsnippet
 
-snippet fref "Forward ref statement used inside component"
+snippet fref "Forward ref statement used inside component" w
 const ref = React.createRef()
 endsnippet
 
-snippet sst "Performs a shallow merge of nextState into current state"
+snippet sst "Performs a shallow merge of nextState into current state" w
 this.setState({$0})
 endsnippet
 
-snippet ssf "Performs a shallow merge of nextState into current state"
+snippet ssf "Performs a shallow merge of nextState into current state" w
 this.setState((state, props) => { return { $0 }})
 endsnippet
 
-snippet props "Access component's props"
+snippet props "Access component's props" w
 this.props.$0
 endsnippet
 
-snippet state "componentState"
+snippet state "componentState" w
 this.state.$0
 endsnippet
 
-snippet bnd "Binds this to a method"
+snippet bnd "Binds this to a method" w
 this.${1:methodName} = this.${1:methodName}.bind(this)$0
 endsnippet
 
-snippet rxaction "reduxAction"
+snippet rxaction "reduxAction" w
 export const ${1:actionName} = (${2:param}) => ({
   type: ${3:type},
   payload: ${4:payload}
 })
 endsnippet
 
-snippet rxconst "reduxConst"
+snippet rxconst "reduxConst" w
 export const ${1:constantName} = '${1:constantName}'
 endsnippet
 
-snippet rxreducer "reduxReducer"
+snippet rxreducer "reduxReducer" w
 const initialState = {
 
 }
@@ -542,13 +542,13 @@ export default (state = initialState, action) => {
 }
 endsnippet
 
-snippet rxselect "reduxSelector"
+snippet rxselect "reduxSelector" w
 import { createSelector } from 'reselect'
 
 export const ${1:selectorName} = state => state.${2:selector}
 endsnippet
 
-snippet rnc "reactNativeComponent"
+snippet rnc "reactNativeComponent" w
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 
@@ -563,7 +563,7 @@ export default class ${1:${TM_FILENAME_BASE}} extends Component {
 }
 endsnippet
 
-snippet rncstyle "reactNativeComponentWithStyles"
+snippet rncstyle "reactNativeComponentWithStyles" w
 import React, { Component } from 'react'
 import { Text, StyleSheet, View } from 'react-native'
 
@@ -580,7 +580,7 @@ export default class ${1:${TM_FILENAME_BASE}} extends Component {
 const styles = StyleSheet.create({})
 endsnippet
 
-snippet rnce "reactNativeComponentExport"
+snippet rnce "reactNativeComponentExport" w
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 
@@ -597,7 +597,7 @@ export class ${1:${TM_FILENAME_BASE}} extends Component {
 export default ${1:${TM_FILENAME_BASE}}
 endsnippet
 
-snippet rnpc "reactNativePureComponent"
+snippet rnpc "reactNativePureComponent" w
 import React, { PureComponent } from 'react'
 import { Text, View } from 'react-native'
 
@@ -612,7 +612,7 @@ export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {
 }
 endsnippet
 
-snippet rnpce "reactNativePureComponentExport"
+snippet rnpce "reactNativePureComponentExport" w
 import React, { PureComponent } from 'react'
 import { Text, View } from 'react-native'
 
@@ -629,7 +629,7 @@ export class ${1:${TM_FILENAME_BASE}} extends PureComponent {
 export default ${1:${TM_FILENAME_BASE}}
 endsnippet
 
-snippet rncredux "Creates a React Native component class with PropTypes with connected redux and ES7 module system"
+snippet rncredux "Creates a React Native component class with PropTypes with connected redux and ES7 module system" w
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 import PropTypes from 'prop-types'
@@ -660,147 +660,147 @@ const mapDispatchToProps = {
 export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})
 endsnippet
 
-snippet imrn "reactNativeImport"
+snippet imrn "reactNativeImport" w
 import { ${1:moduleName} } from 'react-native'
 endsnippet
 
-snippet rnstyle "reactNativeStyles"
+snippet rnstyle "reactNativeStyles" w
 const styles = StyleSheet.create({
   ${1:style}
 })
 endsnippet
 
-snippet pta "Array prop type"
+snippet pta "Array prop type" w
 PropTypes.array,
 endsnippet
 
-snippet ptar "Array prop type required"
+snippet ptar "Array prop type required" w
 PropTypes.array.isRequired,
 endsnippet
 
-snippet ptb "Bool prop type"
+snippet ptb "Bool prop type" w
 PropTypes.bool,
 endsnippet
 
-snippet ptbr "Bool prop type required"
+snippet ptbr "Bool prop type required" w
 PropTypes.bool.isRequired,
 endsnippet
 
-snippet ptf "Func prop type"
+snippet ptf "Func prop type" w
 PropTypes.func,
 endsnippet
 
-snippet ptfr "Func prop type required"
+snippet ptfr "Func prop type required" w
 PropTypes.func.isRequired,
 endsnippet
 
-snippet ptn "Number prop type"
+snippet ptn "Number prop type" w
 PropTypes.number,
 endsnippet
 
-snippet ptnr "Number prop type required"
+snippet ptnr "Number prop type required" w
 PropTypes.number.isRequired,
 endsnippet
 
-snippet pto "Object prop type"
+snippet pto "Object prop type" w
 PropTypes.object,
 endsnippet
 
-snippet ptor "Object prop type required"
+snippet ptor "Object prop type required" w
 PropTypes.object.isRequired,
 endsnippet
 
-snippet pts "String prop type"
+snippet pts "String prop type" w
 PropTypes.string,
 endsnippet
 
-snippet ptsr "String prop type required"
+snippet ptsr "String prop type required" w
 PropTypes.string.isRequired,
 endsnippet
 
-snippet ptnd "Anything that can be rendered: numbers, strings, elements or an array"
+snippet ptnd "Anything that can be rendered: numbers, strings, elements or an array" w
 PropTypes.node,
 endsnippet
 
-snippet ptndr "Anything that can be rendered: numbers, strings, elements or an array required"
+snippet ptndr "Anything that can be rendered: numbers, strings, elements or an array required" w
 PropTypes.node.isRequired,
 endsnippet
 
-snippet ptel "React element prop type"
+snippet ptel "React element prop type" w
 PropTypes.element,
 endsnippet
 
-snippet ptelr "React element prop type required"
+snippet ptelr "React element prop type required" w
 PropTypes.element.isRequired,
 endsnippet
 
-snippet pti "Is an instance of a class prop type"
+snippet pti "Is an instance of a class prop type" w
 PropTypes.instanceOf($0),
 endsnippet
 
-snippet ptir "Is an instance of a class prop type required"
+snippet ptir "Is an instance of a class prop type required" w
 PropTypes.instanceOf($0).isRequired,
 endsnippet
 
-snippet pte "Prop type limited to specific values by treating it as an enum"
+snippet pte "Prop type limited to specific values by treating it as an enum" w
 PropTypes.oneOf(['$0']),
 endsnippet
 
-snippet pter "Prop type limited to specific values by treating it as an enum required"
+snippet pter "Prop type limited to specific values by treating it as an enum required" w
 PropTypes.oneOf(['$0']).isRequired,
 endsnippet
 
-snippet ptet "An object that could be one of many types"
+snippet ptet "An object that could be one of many types" w
 PropTypes.oneOfType([
   $0
 ]),
 endsnippet
 
-snippet ptetr "An object that could be one of many types required"
+snippet ptetr "An object that could be one of many types required" w
 PropTypes.oneOfType([
   $0
 ]).isRequired,
 endsnippet
 
-snippet ptao "An array of a certain type"
+snippet ptao "An array of a certain type" w
 PropTypes.arrayOf($0),
 endsnippet
 
-snippet ptaor "An array of a certain type required"
+snippet ptaor "An array of a certain type required" w
 PropTypes.arrayOf($0).isRequired,
 endsnippet
 
-snippet ptoo "An object with property values of a certain type"
+snippet ptoo "An object with property values of a certain type" w
 PropTypes.objectOf($0),
 endsnippet
 
-snippet ptoor "An object with property values of a certain type required"
+snippet ptoor "An object with property values of a certain type required" w
 PropTypes.objectOf($0).isRequired,
 endsnippet
 
-snippet ptsh "An object taking on a particular shape"
+snippet ptsh "An object taking on a particular shape" w
 PropTypes.shape({
   $0
 }),
 endsnippet
 
-snippet ptshr "An object taking on a particular shape required"
+snippet ptshr "An object taking on a particular shape required" w
 PropTypes.shape({
   $0
 }).isRequired,
 endsnippet
 
-snippet ptypes "staticPropTpyes"
+snippet ptypes "staticPropTpyes" w
 static propTypes = {
 $0
 }
 endsnippet
 
-snippet ptany "Any prop type"
+snippet ptany "Any prop type" w
 PropTypes.any,
 endsnippet
 
-snippet cmmb "Comment Big Block"
+snippet cmmb "Comment Big Block" w
 /**
 |--------------------------------------------------
 | $1
@@ -808,25 +808,25 @@ snippet cmmb "Comment Big Block"
 */
 endsnippet
 
-snippet desc "Testing `describe` block"
+snippet desc "Testing `describe` block" w
 describe('$1', () => {
   $0
 })
 endsnippet
 
-snippet test "Testing `test` block"
+snippet test "Testing `test` block" w
 test('should $1', () => {
   $0
 })
 endsnippet
 
-snippet tit "Testing `it` block"
+snippet tit "Testing `it` block" w
 it('should $1', () => {
   $0
 })
 endsnippet
 
-snippet stest "setupTest"
+snippet stest "setupTest" w
 import { ${1:${TM_FILENAME_BASE}}, mapStateToProps, mapDispatchToProps } from '../${1:${TM_FILENAME_BASE}}'
 
 describe('<${1:${TM_FILENAME_BASE}} />', () => {
@@ -842,7 +842,7 @@ describe('<${1:${TM_FILENAME_BASE}} />', () => {
 })
 endsnippet
 
-snippet sjtest "setupTestWithEnzymeToJson"
+snippet sjtest "setupTestWithEnzymeToJson" w
 import toJson from 'enzyme-to-json'
 import { ${1:${TM_FILENAME_BASE}}, mapStateToProps, mapDispatchToProps } from '../${1:${TM_FILENAME_BASE}}'
 
@@ -859,7 +859,7 @@ describe('<${1:${TM_FILENAME_BASE}} />', () => {
 })
 endsnippet
 
-snippet sntest "setupReactNativeTest"
+snippet sntest "setupReactNativeTest" w
 import 'react-native'
 import React from 'react'
 import renderer from 'react-test-renderer'
@@ -879,7 +879,7 @@ describe('<${1:${TM_FILENAME_BASE}} />', () => {
 })
 endsnippet
 
-snippet sctest "Create test component"
+snippet sctest "Create test component" w
 import React from 'react'
 import renderer from 'react-test-renderer'
 
@@ -895,7 +895,7 @@ describe('<${1:${TM_FILENAME_BASE}} />', () => {
 })
 endsnippet
 
-snippet scrtest "Create test component"
+snippet scrtest "Create test component" w
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { Provider } from 'react-redux'
@@ -917,7 +917,7 @@ describe('<${1:${TM_FILENAME_BASE}} />', () => {
 })
 endsnippet
 
-snippet snrtest "setupReactNativeTestWithRedux"
+snippet snrtest "setupReactNativeTestWithRedux" w
 import 'react-native'
 import React from 'react'
 import renderer from 'react-test-renderer'
@@ -943,17 +943,17 @@ describe('<${1:${TM_FILENAME_BASE}} />', () => {
 })
 endsnippet
 
-snippet graphql "graphQLForComponent"
+snippet graphql "graphQLForComponent" w
 import { compose, graphql } from 'react-apollo'
 endsnippet
 
-snippet expgql "exportGraphQL"
+snippet expgql "exportGraphQL" w
 export default compose(
   graphql(${1:queryOrMutation}, { name: ${2:name} }),
 )(${1:${TM_FILENAME_BASE}})
 endsnippet
 
-snippet hocredux "hocComponentWithRedux"
+snippet hocredux "hocComponentWithRedux" w
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -978,7 +978,7 @@ export const ${1:hocComponentName} = (WrappedComponent) => {
 export default WrapperComponent => connect(mapStateToProps, mapDispatchToProps)(${1:hocComponentName}(WrapperComponent))
 endsnippet
 
-snippet hoc "hocComponent"
+snippet hoc "hocComponent" w
 import React from 'react'
 import PropTypes from 'prop-types'
 
